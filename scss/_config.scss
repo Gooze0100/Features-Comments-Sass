@@ -1,0 +1,24 @@
+// naudoja kintamiesiesm, funkcijoms, mixins ir pan.
+
+$font-stack: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+$light-color: #f4f4f4;
+// $primary-color: dodgerblue;
+$primary-color: rgb(16, 56, 95);
+$secondary-color: lightgreen;
+
+
+// set text color based on background
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    }   @else {
+        @return #fff;
+    }
+}
+
+// set bachground & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
+

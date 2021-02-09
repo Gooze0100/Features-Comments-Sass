@@ -1,0 +1,40 @@
+// naudoja bendrom klasem
+
+.container {
+    // tipo uztenka nurodyti jei pvz yra toks pats pavadinimas ir tik kazkoks prierasas pvz
+    &-extra {
+        background-color: $secondary-color;
+    }
+}
+
+
+// margin & padding classes
+// per sass galime sukurti loop tai apacioje tai ir yra tai nurodo pvz pagal klases pridetas jei m-1 tai toks ir toks atitraukimas 
+
+// sukuriam sarasa
+$spaceamounts: (1, 2, 3, 4, 5);
+
+// loopas per vissa sarasa, cia kaip foreach loop per js per kiekviena eis
+@each $space in $spaceamounts {
+    // tipo sukuri klase su numeriu is savo saraso ir su rem naudoji kad atitraukti tiek kiek nurodai :D eina na kaip kietai
+    // all around margin
+    .m-#{space} {
+        margin: #{$space}rem;
+    }
+    // pasidaro kad is kitos puses butu nulis, cia top and bottom tik
+    .my-#{space} {
+        margin: #{$space}rem 0;
+    }
+
+    .p-#{space} {
+        padding: #{$space}rem;
+    }
+    .py-#{space} {
+        padding: #{$space}rem 0;
+    }
+}
+
+
+// rem is always relative to root element HTML, and em is relative to parent element
+// rem gerai nes pasiima ir prisitaiko pagal narsykles pakeitimus font size
+// em prisitaiko pagal parent tipo jei parent yra koks html tai jam nuo jo pakeis, tipo 1 reiskia ta pati ka ir koks 16px nes toks pagrindinis dydis tevinio elemento

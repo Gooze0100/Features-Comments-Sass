@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body nav {
+  color: #10385f;
+}
+
+.showcase {
+  color: #fff;
+  background-color: lightgreen;
+  background-color: #10385f;
+  color: #fff;
+}
+
+.container-extra {
+  background-color: lightgreen;
+}
+
+.m-space {
+  margin: 1rem;
+}
+
+.my-space {
+  margin: 1rem 0;
+}
+
+.p-space {
+  padding: 1rem;
+}
+
+.py-space {
+  padding: 1rem 0;
+}
+
+.m-space {
+  margin: 2rem;
+}
+
+.my-space {
+  margin: 2rem 0;
+}
+
+.p-space {
+  padding: 2rem;
+}
+
+.py-space {
+  padding: 2rem 0;
+}
+
+.m-space {
+  margin: 3rem;
+}
+
+.my-space {
+  margin: 3rem 0;
+}
+
+.p-space {
+  padding: 3rem;
+}
+
+.py-space {
+  padding: 3rem 0;
+}
+
+.m-space {
+  margin: 4rem;
+}
+
+.my-space {
+  margin: 4rem 0;
+}
+
+.p-space {
+  padding: 4rem;
+}
+
+.py-space {
+  padding: 4rem 0;
+}
+
+.m-space {
+  margin: 5rem;
+}
+
+.my-space {
+  margin: 5rem 0;
+}
+
+.p-space {
+  padding: 5rem;
+}
+
+.py-space {
+  padding: 5rem 0;
+}
+
+.btn-primary, .btn-seconadry {
+  display: inline-block;
+  border-radius: 5px;
+  padding: 8px 20px;
+  margin: 3px;
+}
+
+.btn-primary:hover, .btn-seconadry:hover {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background-color: #17528b;
+  color: #fff;
+}
+
+.btn-seconadry {
+  background-color: lightgreen;
+}
+
+@media (max-width: 700px) {
+  .showcase {
+    height: 400px;
+  }
+  .showcase-contect {
+    text-align: center;
+  }
+  .showcase-contect img {
+    display: none;
+  }
+}

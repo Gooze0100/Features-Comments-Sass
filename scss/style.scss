@@ -1,0 +1,39 @@
+// cia naudoja itraukimui is kito failo, tarkime kad butu atskirai jame ir butu lengva atskirti, ten raso funkcijas, kintamuosius, mixins ir visa kita
+// net nereikia nieko parasyti uztenka tik parasyti config, nes yra underscore parodo kad nekompiliuoti i nauja css faila ir tai nurodo kad tas failas yra partial sito failo ir viska sujungia i viena pvz css faila
+// ziauriai nice
+// is virsaus i apacia todel kiti failai turi prieiga prie auksciau esanciu, tarkime spalvu ir pan.
+@import 'config';
+// galima visaip pasidaryti ir apacioje padaryti
+@import 'utilities';
+@import 'buttons';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+    nav {
+        color: $primary-color;
+    }
+}
+
+.showcase {
+    // iskvieti funkcija pvz pagal sviesuma
+    color: set-text-color($primary-color);
+    background-color: $secondary-color;
+
+    // tipo vietoj abieju color ir background color galima naudoti mixin kaip funkcija tik kad nieko ji negrazina
+    @include set-background($primary-color)
+}
+
+
+// tipo deti i apacia kaip ir visada deda
+// @import 'utilities';
+// @import 'buttons';
+@import 'mobile';
